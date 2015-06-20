@@ -50,3 +50,30 @@ cacheSolve <- function(x=matrix(), ...) {
 
 ## Note that variable m is declared uniquely in both functions
 ## and are allocated separate addresses in memory. 
+
+## This is the test script to proof the return of the cache value for the inverse matrix.  
+
+## Step 1 :
+## > a <- makeCacheMatrix(x = matrix(1:4,2))
+## > a$get()
+## Output gives a 2x2 matrix
+
+## Step 2 :
+## > a$getinverse()
+## Output gives NULL value
+
+## Step 3 :
+## > cacheSolve(a)
+## Calculates the inversion value of the 2X2 matrix and show the output.
+
+## Step 4 : 
+## > a$getinverse()
+## Output show that the inverse has been stored and does not affect anything. 
+## Output give the same inversion value of the 2X2 matrix
+
+## Step 5 :
+## > cacheSolve(a)
+## Output gives message "getting cached data". 
+## This proof the return of the cache value for the inverse matrix.  
+## Output also gives the inversion value of the 2X2 matrix
+
